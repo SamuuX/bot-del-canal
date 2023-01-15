@@ -4,7 +4,11 @@ const sorteosSchema = require(`${process.cwd()}/modelos/sorteos.js`);
 module.exports = async client => { 
     //obtenemos la base de los sorteos pero si no existe la creamos. 
     let db = await sorteosSchema.findOne({ ID: "sorteos" }); 
-    if (!db || db == null) { 
+
+
+
+if (!db || db === null) { 
+
         db = await new sorteosSchema(); 
         await db.save(); 
     } 
@@ -37,8 +41,12 @@ module.exports = async client => {
             //buscamos el index del sorteo haciendo un mapeado de los sorteos y filtrando 
             sorteos.map((sorteo, index) => { 
                 if (sorteo.messageId.includes(messageID)) return sorteoIndex = index; 
-            }) 
+            })
+
              
+
+            console.log(sorteoIndex); 
+
             //si el index es > -1, significa que se ha encontrado el sorteo 
             if (sorteoIndex > -1) { 
                 db.data[sorteoIndex] = datoSorteo; 
