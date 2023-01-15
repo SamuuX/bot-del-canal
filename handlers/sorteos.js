@@ -41,11 +41,16 @@ if (!db || db === null) {
             //buscamos el index del sorteo haciendo un mapeado de los sorteos y filtrando 
             sorteos.map((sorteo, index) => { 
                 if (sorteo.messageId.includes(messageID)) return sorteoIndex = index; 
+
             })
 
              
 
             console.log(sorteoIndex); 
+
+
+            }) 
+
 
             //si el index es > -1, significa que se ha encontrado el sorteo 
             if (sorteoIndex > -1) { 
