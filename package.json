@@ -16,7 +16,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.8.0",
     "@distube/soundcloud": "^1.1.0",
-    "@distube/spotify": "^1.2.1",
+    "@distube/spotify": "^1.5.1",
     "colors": "^1.4.0",
     "discord-giveaways": "^6.0.0",
     "discord-html-transcripts": "^2.6.0",
