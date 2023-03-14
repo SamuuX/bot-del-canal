@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const tickets = new mongoose.Schema({
-    guildID: String,
-    autor: String,
-    canal: String,
-    cerrado: {type: Boolean, default: false}
+  guildID: String,
+  autor: String,
+  canal: String,
+  cerrado: { type: Boolean, default: false }
 })
 
-const model = mongoose.model("Tickets_Creados", tickets);
+const model = mongoose.model('Tickets_Creados', tickets)
 
-module.exports = model;
+module.exports = model
 
 /*
 ╔═════════════════════════════════════════════════════╗
